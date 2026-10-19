@@ -44,7 +44,7 @@ academic-latex-typesetting-skill/
     └── course-report/
         ├── main.tex               # 匿名虚构内容的可编译例子
         ├── references.bib
-        ├── main.pdf               # 已真实编译的一页示例（仅作展示）
+        ├── main.pdf               # 本地编译后生成（示例源码不含二进制 PDF）
         └── README.md
 ```
 

@@ -12,4 +12,4 @@ python ../../scripts/render_pages.py main.pdf --out-dir render --dpi 160
 
 请使用安装了 TeX Live、ctex、biblatex、Biber、TikZ 以及 Poppler 的环境。默认字体由 ctex / 本机字体决定；正式项目中需要按学校或期刊模板调整。
 
-成功编译仅代表工程基本可用；**使用者自己的报告依然要逐页检查 PDF**。示例的 `main.pdf` 是演示成品，正式项目交付时请用真实材料重新生成。
+成功编译仅代表工程基本可用；**使用者自己的报告依然要逐页检查 PDF**。运行上述编译命令可在本地生成演示 PDF `main.pdf`；GitHub 仓库只保存示例源码。正式项目交付时请用真实材料重新生成。

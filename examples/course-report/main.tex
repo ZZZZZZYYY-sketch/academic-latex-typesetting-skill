@@ -1,0 +1,84 @@
+% 仅用于展示本 Skill 的基本版式；所有内容均为虚构占位示例。
+% 本例使用 XeLaTeX + Biber：latexmk -xelatex main.tex
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage[left=24mm,right=24mm,top=19mm,bottom=19mm]{geometry}
+\usepackage{fontspec}
+\IfFontExistsTF{TeX Gyre Termes}{\setmainfont{TeX Gyre Termes}}{}
+\usepackage{amsmath,amssymb,booktabs,array,graphicx,tikz}
+\usetikzlibrary{positioning,arrows.meta}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{references.bib}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\parindent}{2em}
+\linespread{1.06}
+\ctexset{section={beforeskip=1.3ex,afterskip=0.7ex},subsection={beforeskip=1ex,afterskip=0.55ex}}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+
+\begin{document}
+\pagestyle{plain}
+\begin{center}
+  {\LARGE\bfseries 课程实验报告：\LaTeX{} 排版示例\par}
+  \vspace{0.6em}
+  {匿名示例（请替换成实际信息）\quad 2026 年 10 月\par}
+\end{center}
+\vspace{0.4em}
+
+\section{说明}
+本报告仅用于演示课程文档中的中文标题、数学公式、三线表、矢量流程示意图与参考文献。
+它\textbf{不是实际实验报告}，不包含任何实验数据或性能结论。任何正式作业必须用使用者的真实素材替换示例。
+
+\section{排版元素示例}
+\subsection{公式与交叉引用}
+为展示公式排版，考虑最基本的一次函数表达式：
+\begin{equation}
+ y = ax + b,\label{eq:demo}
+\end{equation}
+式\,\eqref{eq:demo}\,仅用于验证数学环境是否正常，不代表特定研究模型。
+
+\subsection{表格}
+表\,\ref{tab:demo}\,展示三线表的表头、对齐与行间距，没有实测数值。
+\begin{table}[htbp]
+  \centering
+  \caption{排版检查项目（说明性示例）}
+  \label{tab:demo}
+  \begin{tabular}{p{0.24\linewidth}p{0.56\linewidth}}
+    \toprule
+    检查对象 & 预期排版效果 \\
+    \midrule
+    正文 & 字体、段间距与标题层级统一 \\
+    表格 & 三线表清楚、无多余竖线 \\
+    公式 & 数学符号正常显示、公式编号可引用 \\
+    图像 & 保持比例、图题位置正确 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{示意图}
+图\,\ref{fig:flow}\,是手工构造的通用流程示意，不属于真实实验结果。
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+    node distance=13mm,
+    every node/.style={font=\small},
+    block/.style={draw,rounded corners=1pt,minimum width=26mm,minimum height=9mm,align=center},
+    >={Stealth[length=2.2mm]}
+  ]
+    \node[block] (a) {输入资料};
+    \node[block,right=of a] (b) {规范排版};
+    \node[block,right=of b] (c) {PDF 审查};
+    \draw[->,thick] (a) -- (b);
+    \draw[->,thick] (b) -- (c);
+  \end{tikzpicture}
+  \caption{排版流程示意（非实验数据）}
+  \label{fig:flow}
+\end{figure}
+
+\section{文献格式示意}
+\LaTeX{} 相关经典资料示例见文献\,\cite{knuth1984texbook}。
+正式报告请替换为真实、相关且已经核实的引文；不同机构可能要求不同的引用样式。
+
+\printbibliography[title={参考文献}]
+\end{document}
